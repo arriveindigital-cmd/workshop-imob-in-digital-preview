@@ -115,15 +115,17 @@ p,li{text-wrap:pretty;}
   .hero-row{display:flex;flex-direction:column;justify-content:center;padding:0 24px 48px;box-sizing:border-box;}
   .hero-photo{display:none;}
   #hero::before{display:none;}
-  .hero-top{position:relative;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:none;}
+  .hero-top{position:absolute;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:none;}
   .hero-mobile-photo{
-    display:block;width:100%;height:auto;margin-top:-8px;margin-bottom:-230px;position:relative;z-index:0;
+    display:block;width:100%;height:auto;margin-bottom:-230px;position:relative;z-index:0;
     -webkit-mask-image:linear-gradient(180deg,#000 40%,transparent 80%);
     mask-image:linear-gradient(180deg,#000 40%,transparent 80%);
   }
-  .hero-top-inner{flex-direction:column;gap:8px;padding:14px 20px;text-align:center;}
-  .hero-logo{height:30px;}
-  .hero-date{font-size:11px;padding:7px 14px;}
+  .hero-top-inner{padding:16px 20px;}
+  .hero-logo{height:24px;}
+  .hero-date{font-size:10px;padding:6px 11px;gap:5px;white-space:nowrap;background:rgba(0,0,0,0.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  .hero-date .ic{width:12px;height:12px;}
+  .date-year{display:none;}
   .hero-content{position:relative;z-index:1;max-width:100%;min-width:0;text-align:center;}
   .hero-content .eyebrow{text-align:center;}
   .hero-content h1{font-size:20px;font-weight:800;line-height:1.35;}
@@ -550,7 +552,7 @@ footer p{color:var(--text3);font-size:11.5px;}
   <div class="hero-top">
     <div class="hero-top-inner">
       <img src="assets/logo-workshop.png" class="hero-logo" alt="Workshop Imob In Digital">
-      <div class="hero-date"><svg class="ic"><use href="#ic-calendar"/></svg> 08 de Agosto de 2026 · 09h30 às 17h30</div>
+      <div class="hero-date"><svg class="ic"><use href="#ic-calendar"/></svg> 08 de Agosto<span class="date-year"> de 2026</span> · 09h30 às 17h30</div>
     </div>
   </div>
   <img src="assets/hero-photo-card.png" class="hero-mobile-photo" alt="Erik Tafuri e Miguel Maulim">
