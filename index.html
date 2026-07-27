@@ -210,8 +210,9 @@ p,li{text-wrap:pretty;}
 .pillar-num{width:26px;height:26px;border-radius:8px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;}
 
 /* prova — mockup de navegador simulando a busca acontecendo na tela */
-.proof-lead{max-width:600px;margin:44px auto 0;font-size:17px;font-weight:700;text-align:center;}
-.browser-mock{max-width:460px;margin:28px auto 0;background:#1a1a1a;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.proof-section .head-center{margin-bottom:32px;}
+.proof-section .head-center h2{font-weight:500;line-height:1.3;}
+.browser-mock{max-width:460px;margin:0 auto;background:#1a1a1a;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .browser-bar{display:flex;align-items:center;gap:6px;padding:12px 14px;background:#111;border-bottom:1px solid var(--border);}
 .bdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.15);}
 .burl{flex:1;margin-left:8px;background:rgba(255,255,255,0.06);border-radius:6px;padding:8px 12px;display:flex;align-items:center;gap:8px;}
@@ -243,8 +244,17 @@ p,li{text-wrap:pretty;}
 .cursor-inner{width:100%;height:100%;filter:drop-shadow(0 2px 5px rgba(0,0,0,.6));}
 .fake-cursor.clicking .cursor-inner{animation:cursor-click .35s ease;}
 @keyframes cursor-click{50%{transform:scale(.7);}}
-.proof-setup{max-width:640px;margin:34px auto 0;font-size:16px;line-height:1.6;text-align:center;}
-.proof-setup b{font-weight:800;}
+.proof-copy{max-width:700px;margin:34px auto 0;display:flex;flex-direction:column;gap:18px;text-align:center;}
+.proof-copy p{font-size:16px;font-weight:500;line-height:1.65;color:rgba(0,0,0,.68);}
+.proof-copy .proof-question{font-size:19px;font-weight:600;line-height:1.5;color:#0a0a0a;}
+@media(max-width:700px){
+  .proof-section{padding:72px 0;}
+  .proof-section .head-center{margin-bottom:26px;}
+  .proof-section .head-center h2{font-size:22px;font-weight:500;line-height:1.35;}
+  .proof-copy{margin-top:28px;gap:16px;}
+  .proof-copy p{font-size:14px;line-height:1.65;}
+  .proof-copy .proof-question{font-size:16px;font-weight:600;line-height:1.5;}
+}
 
 /* ============ PILARES (posicionamento, conteúdo, anúncio) — um mockup só, pilares numerados, bullets aparecendo no scroll ============ */
 .pillars-wrap{max-width:540px;margin:0 auto;background:#1a1a1a;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.3);}
@@ -627,12 +637,12 @@ footer p{color:var(--text3);font-size:11.5px;}
 </div>
 
 <!-- ============================================================ MECANISMO 1/5 — A PROVA -->
-<section class="section section-light">
+<section class="section section-light proof-section">
   <div class="container">
     <div class="head-center reveal">
-      <h2>O corretor que vende bem não depende mais só de&nbsp;anúncio. Por&nbsp;quê?</h2>
+      <h2>O comportamento do comprador mudou. Hoje, a jornada de compra se inicia muito antes do primeiro&nbsp;contato.</h2>
     </div>
-    <p class="proof-lead reveal">O comprador de imóvel mudou de canal. Antes de falar com qualquer corretor, ele&nbsp;já:</p>
+
     <div class="browser-mock reveal">
       <div class="browser-bar">
         <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
@@ -652,7 +662,10 @@ footer p{color:var(--text3);font-size:11.5px;}
         </div>
       </div>
     </div>
-    <p class="proof-setup reveal">Quem só tem anúncio, sem posicionamento e sem conteúdo por trás, paga caro por clique de gente que nem sabia o que estava procurando. <b>Quem tem os 3 alinhados, aparece pro comprador certo antes de gastar um real em&nbsp;tráfego.</b></p>
+    <div class="proof-copy reveal">
+      <p>Antes de falar com um corretor, o comprador pesquisa, compara opções, busca informações e avança na sua decisão. Quando o primeiro contato acontece, uma parte importante da jornada de compra já foi&nbsp;percorrida.</p>
+      <p class="proof-question">Se a jornada de compra mudou, será que a sua forma de vender evoluiu no mesmo&nbsp;ritmo?</p>
+    </div>
   </div>
 </section>
 
