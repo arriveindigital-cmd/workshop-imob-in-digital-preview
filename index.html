@@ -117,12 +117,12 @@ p,li{text-wrap:pretty;}
   #hero::before{display:none;}
   .hero-top{position:absolute;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:none;}
   .hero-mobile-photo{
-    display:block;width:100%;height:auto;margin-bottom:-230px;position:relative;z-index:0;
+    display:block;width:100%;height:auto;margin-bottom:-59%;position:relative;z-index:0;
     -webkit-mask-image:linear-gradient(180deg,#000 40%,transparent 80%);
     mask-image:linear-gradient(180deg,#000 40%,transparent 80%);
   }
   .hero-top-inner{padding:16px 20px;}
-  .hero-logo{height:24px;}
+  .hero-logo{height:34px;}
   .hero-date{font-size:10px;padding:6px 11px;gap:5px;white-space:nowrap;background:rgba(0,0,0,0.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
   .hero-date .ic{width:12px;height:12px;}
   .date-year{display:none;}
@@ -136,6 +136,9 @@ p,li{text-wrap:pretty;}
   .price-inline{align-items:flex-start;flex-shrink:0;}
   .price-inline .old{font-size:11px;}
   .price-inline .new{font-size:16px;}
+}
+@media(max-width:400px){
+  .date-time{display:none;}
 }
 @media(max-width:380px){
   .hero-cta-top .btn .lote-tag{display:none;}
@@ -552,7 +555,7 @@ footer p{color:var(--text3);font-size:11.5px;}
   <div class="hero-top">
     <div class="hero-top-inner">
       <img src="assets/logo-workshop.png" class="hero-logo" alt="Workshop Imob In Digital">
-      <div class="hero-date"><svg class="ic"><use href="#ic-calendar"/></svg> 08 de Agosto<span class="date-year"> de 2026</span> · 09h30 às 17h30</div>
+      <div class="hero-date"><svg class="ic"><use href="#ic-calendar"/></svg> 08 de Agosto<span class="date-year"> de 2026</span><span class="date-time"> · 09h30 às 17h30</span></div>
     </div>
   </div>
   <img src="assets/hero-photo-card.png" class="hero-mobile-photo" alt="Erik Tafuri e Miguel Maulim">
