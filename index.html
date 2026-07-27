@@ -89,7 +89,7 @@ p,li{text-wrap:pretty;}
 
 .hero-row{position:relative;z-index:1;max-width:1800px;margin:0 auto;min-height:94vh;display:flex;align-items:center;padding:130px 80px 70px;box-sizing:border-box;}
 .hero-content{position:relative;z-index:1;max-width:640px;}
-.hero-badge{display:none;}
+.hero-mobile-photo{display:none;}
 .hero-content .eyebrow{display:block;margin-bottom:16px;color:rgba(255,255,255,0.45);}
 .hero-content h1{font-size:34px;font-weight:750;margin:0 0 20px;}
 .hero-content p.sub{font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:42px;}
@@ -111,27 +111,19 @@ p,li{text-wrap:pretty;}
   object-fit:contain;object-position:bottom right;
 }
 @media(max-width:1000px){
-  #hero{min-height:100vh;}
-  .hero-row{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:118px 24px 40px;box-sizing:border-box;}
+  #hero{background:#0a0710 radial-gradient(ellipse 700px 500px at 50% 0%, rgba(124,58,237,0.35), transparent 65%);}
+  .hero-row{display:flex;flex-direction:column;justify-content:center;padding:0 24px 48px;box-sizing:border-box;}
   .hero-photo{display:none;}
-  #hero{
-    background:
-      radial-gradient(ellipse 900px 700px at 100% 0%, rgba(124,58,237,0.4), transparent 60%),
-      #000 url(assets/bg-hero-mobile.jpg) right center/cover no-repeat;
+  #hero::before{display:none;}
+  .hero-mobile-photo{
+    display:block;width:100%;height:auto;margin-bottom:-260px;position:relative;z-index:0;
+    -webkit-mask-image:linear-gradient(180deg,#000 35%,transparent 85%);
+    mask-image:linear-gradient(180deg,#000 35%,transparent 85%);
   }
-  #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.78) 100%);}
   .hero-top-inner{flex-direction:column;gap:8px;padding:14px 20px;text-align:center;}
   .hero-logo{height:30px;}
   .hero-date{font-size:11px;padding:7px 14px;}
   .hero-content{position:relative;z-index:1;max-width:100%;min-width:0;text-align:center;}
-  .hero-badge{
-    display:block;width:228px;margin:0 auto 20px;border-radius:20px;
-    overflow:hidden;box-shadow:0 16px 40px rgba(124,58,237,0.35), 0 4px 20px rgba(0,0,0,0.5);
-    opacity:0;transform:translateY(18px);animation:badge-in .7s cubic-bezier(.16,1,.3,1) .15s forwards;
-  }
-  .hero-badge img{width:100%;height:auto;display:block;}
-  @keyframes badge-in{to{opacity:1;transform:translateY(0);}}
-  @media(prefers-reduced-motion:reduce){.hero-badge{animation:none;opacity:1;transform:none;}}
   .hero-content .eyebrow{text-align:center;}
   .hero-content h1{font-size:20px;font-weight:800;line-height:1.35;}
   .hero-content p.sub{font-size:11.5px;margin-bottom:28px;}
@@ -560,9 +552,9 @@ footer p{color:var(--text3);font-size:11.5px;}
       <div class="hero-date"><svg class="ic"><use href="#ic-calendar"/></svg> 08 de Agosto de 2026 · 09h30 às 17h30</div>
     </div>
   </div>
+  <img src="assets/hero-photo-card.png" class="hero-mobile-photo" alt="Erik Tafuri e Miguel Maulim">
   <div class="hero-row">
     <div class="hero-content reveal in">
-      <div class="hero-badge"><img src="assets/hero-photo-card.png" alt="Erik Tafuri e Miguel Maulim"></div>
       <span class="eyebrow">100% online e ao vivo</span>
       <h1>Construa em 1 dia seu posicionamento com conteúdos e anúncios de imóveis que fecham venda todo&nbsp;mês.</h1>
       <p class="sub">Vamos construir isso juntos — o mesmo sistema que a Arrive aplica em mais de 200 estruturas digitais desde 2012. No orgânico, 41% dos compradores encontram o corretor pelo conteúdo (NAR, 2025); no pago, a Meta usa esse mesmo perfil pra segmentar melhor a campanha. Construiremos os dois ao vivo, nesse&nbsp;workshop.</p>
