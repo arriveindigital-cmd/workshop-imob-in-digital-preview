@@ -40,7 +40,7 @@ h1,h2,h3{font-weight:900;letter-spacing:-0.02em;line-height:1.15;text-wrap:balan
 .reveal.in{opacity:1;transform:translateY(0);}
 .head-center{text-align:center;max-width:700px;margin:0 auto 54px;}
 .head-center .eyebrow{display:block;margin-bottom:14px;}
-.problem-section{background:linear-gradient(180deg,#fff 0,#f7f7f7 36px,#f7f7f7 100%);}
+.problem-section{background:#f7f7f7;margin-top:-1px;}
 .problem-section .head-center{max-width:780px;margin-bottom:0;}
 .problem-section .head-center h2{color:#18131f;}
 .problem-list{max-width:920px;margin:40px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left;}
@@ -263,6 +263,17 @@ p,li{text-wrap:pretty;}
   background-image:linear-gradient(#faf8ff,#faf8ff), var(--grad);
   background-origin:border-box;background-clip:padding-box, border-box;
 }
+.proof-section{z-index:1;}
+.proof-transition{
+  position:absolute;left:50%;bottom:-22px;z-index:3;transform:translateX(-50%);
+  width:44px;height:44px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 28px rgba(124,58,237,.3);
+}
+.proof-transition::before{
+  content:'';position:absolute;left:50%;bottom:100%;width:1px;height:32px;transform:translateX(-50%);
+  background:linear-gradient(180deg,rgba(124,58,237,.08),rgba(124,58,237,.65));
+}
+.proof-transition .ic{width:18px;height:18px;color:#fff;transform:rotate(90deg);}
 @media(max-width:700px){
   .proof-section{padding:72px 0;}
   .proof-section .head-center{margin-bottom:26px;}
@@ -691,6 +702,7 @@ footer p{color:var(--text3);font-size:11.5px;}
         <p class="proof-question">A jornada de compra mudou. Sua forma de vender mudou&nbsp;também?</p>
       </div>
     </div>
+    <div class="proof-transition" aria-hidden="true"><svg class="ic"><use href="#ic-arrow"/></svg></div>
   </div>
 </section>
 
