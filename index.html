@@ -265,15 +265,21 @@ p,li{text-wrap:pretty;}
 }
 .proof-section{z-index:1;}
 .proof-transition{
-  position:absolute;left:50%;bottom:-22px;z-index:3;transform:translateX(-50%);
+  position:absolute;left:50%;bottom:-22px;z-index:3;opacity:0;transform:translate(-50%,-22px) scale(.86);
   width:44px;height:44px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;
   box-shadow:0 10px 28px rgba(124,58,237,.3);
 }
-.proof-transition::before{
-  content:'';position:absolute;left:50%;bottom:100%;width:1px;height:32px;transform:translateX(-50%);
-  background:linear-gradient(180deg,rgba(124,58,237,.08),rgba(124,58,237,.65));
-}
+.proof-transition.in{animation:proof-arrow-drop .72s cubic-bezier(.2,.85,.3,1.15) forwards;}
 .proof-transition .ic{width:18px;height:18px;color:#fff;transform:rotate(90deg);}
+@keyframes proof-arrow-drop{
+  0%{opacity:0;transform:translate(-50%,-22px) scale(.86);}
+  62%{opacity:1;transform:translate(-50%,5px) scale(1.04);}
+  82%{opacity:1;transform:translate(-50%,-3px) scale(.98);}
+  100%{opacity:1;transform:translate(-50%,0) scale(1);}
+}
+@media(prefers-reduced-motion:reduce){
+  .proof-transition,.proof-transition.in{opacity:1;transform:translate(-50%,0);animation:none;}
+}
 @media(max-width:700px){
   .proof-section{padding:72px 0;}
   .proof-section .head-center{margin-bottom:26px;}
@@ -1362,6 +1368,19 @@ const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 },{threshold:.15});
 revealEls.forEach(el=>io.observe(el));
+
+const proofTransition = document.querySelector('.proof-transition');
+if(proofTransition){
+  const proofTransitionIO = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        proofTransitionIO.unobserve(e.target);
+      }
+    });
+  },{threshold:.35,rootMargin:'0px 0px -24% 0px'});
+  proofTransitionIO.observe(proofTransition);
+}
 
 const currWrap = document.querySelector('.curr-pin-wrap');
 if(currWrap){
