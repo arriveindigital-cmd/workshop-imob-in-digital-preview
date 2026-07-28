@@ -39,6 +39,11 @@ h1,h2,h3{font-weight:900;letter-spacing:-0.02em;line-height:1.15;text-wrap:balan
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;}
 .reveal.in{opacity:1;transform:translateY(0);}
 .head-center{text-align:center;max-width:700px;margin:0 auto 54px;}
+.head-center .eyebrow{display:block;margin-bottom:14px;}
+.problem-list{max-width:780px;margin:36px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;text-align:left;}
+.problem-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;font-weight:500;line-height:1.5;color:rgba(0,0,0,.72);}
+.problem-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:rgba(220,38,38,.1);display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.problem-icon .ic{width:12px;height:12px;color:#dc2626;}
 .head-center h2{font-size:30px;}
 .head-center p{margin-top:12px;font-size:15.5px;text-wrap:pretty;}
 
@@ -260,6 +265,11 @@ p,li{text-wrap:pretty;}
   .proof-copy p{font-size:14px;line-height:1.65;}
   .proof-copy .proof-question{font-size:16px;font-weight:600;line-height:1.5;}
   .proof-question-box{padding:16px 22px;border-radius:16px;}
+  .problem-section{padding:64px 0;}
+  .problem-section .head-center{margin-bottom:0;}
+  .problem-section .head-center h2{font-size:22px;font-weight:500;line-height:1.35;}
+  .problem-list{grid-template-columns:1fr;gap:14px;margin-top:28px;}
+  .problem-item{font-size:14px;}
 }
 
 /* ============ PILARES (posicionamento, conteúdo, anúncio) — um mockup só, pilares numerados, bullets aparecendo no scroll ============ */
@@ -646,6 +656,7 @@ footer p{color:var(--text3);font-size:11.5px;}
 <section class="section section-light proof-section">
   <div class="container">
     <div class="head-center reveal">
+      <span class="eyebrow">O Cenário</span>
       <h2>O comportamento do comprador mudou. Hoje, a jornada de compra se inicia muito antes do primeiro&nbsp;contato.</h2>
     </div>
 
@@ -673,6 +684,24 @@ footer p{color:var(--text3);font-size:11.5px;}
       <div class="proof-question-box">
         <p class="proof-question">A jornada de compra mudou. Sua forma de vender mudou&nbsp;também?</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ O PROBLEMA -->
+<section class="section section-light problem-section">
+  <div class="container">
+    <div class="head-center reveal">
+      <span class="eyebrow">O Problema</span>
+      <h2>Enquanto a jornada de compra evoluiu, a forma de vender de muitos corretores continuou a&nbsp;mesma.</h2>
+    </div>
+    <div class="problem-list reveal">
+      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Dependem de indicações para gerar novas oportunidades.</div>
+      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Concentram seus esforços nos portais imobiliários.</div>
+      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Esperam o primeiro contato para começar a vender.</div>
+      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Anunciam imóveis sem uma estratégia que acompanhe a jornada do comprador.</div>
+      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Competem pelos mesmos compradores que todos os outros corretores.</div>
+      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Trabalham muito, mas sem previsibilidade na geração de oportunidades.</div>
     </div>
   </div>
 </section>
