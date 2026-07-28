@@ -40,14 +40,25 @@ h1,h2,h3{font-weight:900;letter-spacing:-0.02em;line-height:1.15;text-wrap:balan
 .reveal.in{opacity:1;transform:translateY(0);}
 .head-center{text-align:center;max-width:700px;margin:0 auto 54px;}
 .head-center .eyebrow{display:block;margin-bottom:14px;}
-.problem-section{background:#000 url(assets/bg-mecanismo.jpg) top center/100% auto no-repeat;}
-.problem-list{max-width:820px;margin:36px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left;}
-.problem-item{
-  display:flex;align-items:flex-start;gap:12px;font-size:15px;font-weight:500;line-height:1.5;color:rgba(255,255,255,.78);
-  padding:18px 20px;border-radius:14px;background:#1a1a1a;border:1px solid var(--border);
+.problem-section{
+  background:
+    radial-gradient(ellipse 620px 360px at 50% 0%,rgba(124,58,237,.07),transparent 70%),
+    #f1eef5;
+  border-top:1px solid rgba(28,22,38,.06);
 }
-.problem-icon{flex-shrink:0;width:24px;height:24px;border-radius:8px;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-top:1px;}
-.problem-icon .ic{width:12px;height:12px;color:#fff;}
+.problem-section .head-center{max-width:780px;margin-bottom:0;}
+.problem-section .head-center h2{color:#18131f;}
+.problem-intro{max-width:720px;margin:18px auto 0;font-size:16px;line-height:1.7;color:#625b6b;text-align:center;}
+.problem-list{max-width:1080px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left;}
+.problem-item{
+  padding:26px 24px 28px;border-radius:18px;background:#fff;border:1px solid rgba(28,22,38,.08);
+  box-shadow:0 14px 38px rgba(38,26,54,.07);
+}
+.problem-icon{width:42px;height:42px;border-radius:13px;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 8px 22px rgba(124,58,237,.2);}
+.problem-icon .ic{width:19px;height:19px;color:#fff;}
+.problem-title{font-size:18px;line-height:1.3;color:#18131f;margin:0 0 12px;}
+.problem-copy{font-size:14px;line-height:1.7;color:#6a6372;margin:0;}
+.problem-closing{max-width:760px;margin:34px auto 0;text-align:center;font-size:18px;font-weight:650;line-height:1.5;color:#231b2d;}
 .head-center h2{font-size:30px;}
 .head-center p{margin-top:12px;font-size:15.5px;text-wrap:pretty;}
 
@@ -272,8 +283,13 @@ p,li{text-wrap:pretty;}
   .problem-section{padding:64px 0;}
   .problem-section .head-center{margin-bottom:0;}
   .problem-section .head-center h2{font-size:22px;font-weight:500;line-height:1.35;}
+  .problem-intro{margin-top:16px;font-size:14px;line-height:1.65;}
   .problem-list{grid-template-columns:1fr;gap:14px;margin-top:28px;}
-  .problem-item{font-size:14px;}
+  .problem-item{padding:22px 20px 24px;}
+  .problem-icon{width:38px;height:38px;border-radius:12px;margin-bottom:18px;}
+  .problem-icon .ic{width:17px;height:17px;}
+  .problem-title{font-size:17px;}
+  .problem-closing{margin-top:28px;font-size:16px;}
 }
 
 /* ============ PILARES (posicionamento, conteúdo, anúncio) — um mockup só, pilares numerados, bullets aparecendo no scroll ============ */
@@ -695,19 +711,29 @@ footer p{color:var(--text3);font-size:11.5px;}
 <section class="section problem-section">
   <div class="container">
     <div class="head-center reveal">
-      <h2>Enquanto a jornada de compra evoluiu, a forma de vender de muitos corretores continuou a&nbsp;mesma.</h2>
+      <h2>O problema não é falta de esforço. É vender sem um sistema que acompanhe a jornada do&nbsp;comprador.</h2>
+      <p class="problem-intro">Enquanto o comprador passou a pesquisar, comparar e decidir antes do primeiro contato, muitos corretores continuam dependendo de uma forma de vender que começa tarde&nbsp;demais.</p>
     </div>
     <div class="problem-list reveal">
-      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Dependem de indicações para gerar novas oportunidades.</div>
-      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Concentram seus esforços nos portais imobiliários.</div>
-      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Esperam o primeiro contato para começar a vender.</div>
-      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Anunciam imóveis sem uma estratégia que acompanhe a jornada do comprador.</div>
-      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Competem pelos mesmos compradores que todos os outros corretores.</div>
-      <div class="problem-item"><span class="problem-icon"><svg class="ic"><use href="#ic-x"/></svg></span>Trabalham muito, mas sem previsibilidade na geração de oportunidades.</div>
+      <article class="problem-item">
+        <span class="problem-icon"><svg class="ic"><use href="#ic-signal"/></svg></span>
+        <h3 class="problem-title">Dependência de canais que você não controla</h3>
+        <p class="problem-copy">Indicações e portais podem gerar oportunidades, mas não oferecem controle ou previsibilidade sobre quando o próximo comprador vai&nbsp;chegar.</p>
+      </article>
+      <article class="problem-item">
+        <span class="problem-icon"><svg class="ic"><use href="#ic-chat"/></svg></span>
+        <h3 class="problem-title">A venda começa tarde demais</h3>
+        <p class="problem-copy">Sem posicionamento e conteúdo, o corretor espera o comprador entrar em contato para só então começar a construir confiança e demonstrar&nbsp;valor.</p>
+      </article>
+      <article class="problem-item">
+        <span class="problem-icon"><svg class="ic"><use href="#ic-target"/></svg></span>
+        <h3 class="problem-title">Muito esforço, pouca previsibilidade</h3>
+        <p class="problem-copy">Quando todos anunciam os mesmos imóveis de forma parecida, o corretor compete pela mesma atenção e tem dificuldade para construir uma demanda&nbsp;própria.</p>
+      </article>
     </div>
+    <p class="problem-closing reveal">Para vender com mais previsibilidade, sua presença digital precisa começar a trabalhar antes do primeiro&nbsp;contato.</p>
   </div>
 </section>
-
 <!-- ============================================================ MECANISMO 2-4/5 — POSICIONAMENTO, CONTEÚDO, ANÚNCIO -->
 <section class="section bg-mecanismo">
   <div class="container">
