@@ -1446,6 +1446,19 @@ if(proofTransition){
   proofTransitionIO.observe(proofTransition);
 }
 
+const compareTransition = document.querySelector('.compare-transition');
+if(compareTransition){
+  const compareTransitionIO = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        compareTransitionIO.unobserve(e.target);
+      }
+    });
+  },{threshold:.5});
+  compareTransitionIO.observe(compareTransition);
+}
+
 const currWrap = document.querySelector('.curr-pin-wrap');
 if(currWrap){
   const currCards = document.querySelectorAll('.curr-card2');
