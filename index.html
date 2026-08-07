@@ -327,12 +327,16 @@ p,li{text-wrap:pretty;}
 .pm-ad-bars{display:flex;flex-direction:column;gap:7px;margin-bottom:12px;}
 .pm-ad-btn{display:inline-block;font-size:11px;padding:6px 14px;border-radius:6px;background:var(--grad);color:#fff;font-weight:700;}
 @media(max-width:700px){
-  .head-center p{margin-top:16px;line-height:1.55;}
+  .head-center h2{margin-bottom:2px;}
+  .head-center p{margin-top:18px;line-height:1.55;}
   .bg-mecanismo .head-center h2{font-size:22px;font-weight:500;line-height:1.35;letter-spacing:-0.01em;}
   .bg-mecanismo .head-center p{font-size:14px;}
   .pillar-block{padding:36px 24px;}
   .pillar-block h3{font-size:19px;font-weight:500;}
   .pillar-block-intro{font-size:14px;}
+  /* headlines "divisoras" de seção (sem sub-texto logo abaixo) ficam um pouco maiores/mais firmes que as headline+sub */
+  .head-center.section-divider h2{font-size:24px;font-weight:600;}
+  .compare-title-section{padding-top:48px !important;}
 }
 
 /* arco antes/depois — foto de fundo, chips centralizados por cima */
@@ -466,9 +470,11 @@ p,li{text-wrap:pretty;}
 .transicao{background:#0a0a0a;padding:64px 0;text-align:center;}
 .transicao h2{font-size:24px;color:#fff;max-width:720px;margin:0 auto 10px;}
 .transicao p{color:var(--text2);font-size:14px;}
-@media(max-width:700px){.transicao{padding:48px 0;}.transicao .container{padding:0 14px;}.transicao h2{font-size:16px;line-height:1.4;max-width:100%;}.transicao p{font-size:12.5px;}}
+@media(max-width:700px){.transicao{padding:48px 0;}.transicao .container{padding:0 14px;}.transicao h2{font-size:20px;font-weight:500;line-height:1.4;max-width:100%;margin-bottom:14px;}.transicao p{font-size:13px;}}
 
 /* ============ CRONOGRAMA ============ */
+.cron-hero{min-height:100vh;display:flex;align-items:center;}
+@media(max-width:700px){.cron-hero{min-height:auto;display:block;padding:56px 0;}}
 .cron-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;}
 .cron-meta{display:inline-block;font-size:17px;color:rgba(0,0,0,.5);padding-bottom:16px;margin-bottom:20px;border-bottom:1px solid rgba(0,0,0,0.12);}
 .cron-grid h2{font-size:52px;font-weight:700;color:#0a0a0a;margin-bottom:14px;}
@@ -794,7 +800,7 @@ footer p{color:var(--text3);font-size:11.5px;}
       </div>
     </div>
 
-    <div class="head-center reveal" style="margin-top:50px;margin-bottom:28px;">
+    <div class="head-center section-divider reveal" style="margin-top:50px;margin-bottom:28px;">
       <h2>O resultado</h2>
     </div>
 
@@ -821,9 +827,9 @@ footer p{color:var(--text3);font-size:11.5px;}
 </section>
 
 <!-- ============================================================ SEM SISTEMA VS COM SISTEMA -->
-<section class="section section-light" style="padding-bottom:20px;">
+<section class="section section-light compare-title-section" style="padding-bottom:20px;">
   <div class="container">
-    <div class="head-center compare-title reveal" style="margin-bottom:0;">
+    <div class="head-center compare-title section-divider reveal" style="margin-bottom:0;">
       <h2>Sem sistema vs. com&nbsp;sistema</h2>
     </div>
   </div>
@@ -1177,7 +1183,7 @@ footer p{color:var(--text3);font-size:11.5px;}
 </section>
 
 <!-- ============================================================ CRONOGRAMA -->
-<section class="section section-light" style="min-height:100vh;display:flex;align-items:center;">
+<section class="section section-light cron-hero">
   <div class="container cron-grid" style="width:100%;">
     <div class="reveal">
       <div class="cron-meta">08 de Agosto de 2026 | Ao vivo | Online</div>
