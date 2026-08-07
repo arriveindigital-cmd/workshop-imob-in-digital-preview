@@ -1397,7 +1397,7 @@ if(currWrap){
     let progress = total > 0 ? -rect.top / total : 0;
     progress = Math.min(1, Math.max(0, progress));
     const idx = Math.min(currCards.length - 1, Math.floor(progress * currCards.length));
-    currCards.forEach((c,i)=> c.classList.toggle('revealed', i <= idx));
+    currCards.forEach((c,i)=> c.classList.toggle('revealed', i === idx));
   };
   window.addEventListener('scroll', updateCurr, {passive:true});
   updateCurr();
