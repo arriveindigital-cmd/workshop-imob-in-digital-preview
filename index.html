@@ -628,9 +628,18 @@ p,li{text-wrap:pretty;}
 .faq-item.open .faq-a{max-height:200px;padding-bottom:20px;}
 
 /* ============ FECHAMENTO ============ */
-.fechamento{background:var(--grad);text-align:center;padding:80px 0;}
-.fechamento h2{font-size:23px;color:#fff;max-width:640px;margin:0 auto 26px;}
-.fechamento .btn{background:#fff;color:#0a0a0a;box-shadow:none;}
+.fechamento{
+  text-align:center;padding:90px 0;
+  background:
+    radial-gradient(ellipse 700px 420px at 20% 0%, rgba(249,115,22,0.16), transparent 60%),
+    radial-gradient(ellipse 700px 420px at 100% 100%, rgba(124,58,237,0.22), transparent 60%),
+    #0a0a0a;
+}
+.fechamento h2{font-size:26px;font-weight:600;line-height:1.4;color:#fff;max-width:620px;margin:0 auto 28px;}
+@media(max-width:700px){
+  .fechamento{padding:64px 0;}
+  .fechamento h2{font-size:21px;font-weight:500;line-height:1.4;}
+}
 
 footer{background:#000;text-align:center;padding:36px 0;border-top:1px solid var(--border);}
 footer img{height:16px;margin:0 auto 10px;opacity:.6;}
