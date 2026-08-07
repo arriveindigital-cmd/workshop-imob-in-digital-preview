@@ -592,15 +592,18 @@ p,li{text-wrap:pretty;}
 
 /* ============ QUEM SOMOS ============ */
 .qs-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:26px;}
-.qs-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;}
-.qs-head{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
-.qs-avatar{width:76px;height:76px;border-radius:16px;overflow:hidden;flex-shrink:0;box-shadow:0 0 0 1px rgba(255,255,255,0.08);}
-.qs-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
-.qs-card h3{font-size:17px;}
-.qs-card .role{font-size:12.5px;color:rgba(255,255,255,0.45);font-weight:700;line-height:1.5;margin-bottom:16px;}
+.qs-card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;}
+.qs-photo{width:100%;aspect-ratio:1/1;background:#000;}
+.qs-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.qs-body{padding:26px 28px 30px;}
+.qs-card h3{font-size:20px;margin-bottom:4px;}
+.qs-card .role{font-size:12.5px;font-weight:700;line-height:1.5;margin-bottom:16px;}
 .qs-card p{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:10px;}
 .qs-together{text-align:center;max-width:660px;margin:0 auto;color:var(--text2);font-size:14.5px;}
-@media(max-width:700px){.qs-grid{grid-template-columns:1fr;}}
+@media(max-width:700px){
+  .qs-grid{grid-template-columns:1fr;}
+  .qs-photo{aspect-ratio:4/3;}
+}
 
 /* ============ COMEÇANDO VS JÁ VENDE ============ */
 .startpoint-section .head-center{max-width:640px;}
@@ -1330,20 +1333,20 @@ footer p{color:var(--text3);font-size:11.5px;}
     </div>
     <div class="qs-grid">
       <div class="qs-card reveal">
-        <div class="qs-head">
-          <div class="qs-avatar"><img src="assets/quem-somos-miguel.jpg" alt="Miguel Maulim"></div>
+        <div class="qs-photo"><img src="assets/quem-somos-miguel.jpg" alt="Miguel Maulim"></div>
+        <div class="qs-body">
           <h3>Miguel Maulim</h3>
+          <div class="role grad-text">Idealizador e Sócio-Fundador da Arrive In&nbsp;Digital</div>
+          <p>Esteve à frente do marketing digital de uma das maiores operações imobiliárias da região, com <b>VGV de R$ 200 milhões/ano</b>. Antes disso, atuou no comercial como SDR, o que lhe deu uma visão completa da operação: <b>da geração de oportunidades à conversão em&nbsp;vendas.</b></p>
         </div>
-        <div class="role">Idealizador e Sócio-Fundador da Arrive In&nbsp;Digital</div>
-        <p>Esteve à frente do marketing digital de uma das maiores operações imobiliárias da região, com <b>VGV de R$ 200 milhões/ano</b>. Antes disso, atuou no comercial como SDR, o que lhe deu uma visão completa da operação: <b>da geração de oportunidades à conversão em&nbsp;vendas.</b></p>
       </div>
       <div class="qs-card reveal">
-        <div class="qs-head">
-          <div class="qs-avatar"><img src="assets/quem-somos-erik.jpg" alt="Erik Tafuri"></div>
+        <div class="qs-photo"><img src="assets/quem-somos-erik.jpg" alt="Erik Tafuri"></div>
+        <div class="qs-body">
           <h3>Erik Tafuri</h3>
+          <div class="role grad-text">Estrategista Digital e Sócio-Fundador da Arrive In&nbsp;Digital</div>
+          <p><b>Mais de 14 anos de atuação no mercado digital.</b> Ao longo dessa trajetória, construiu mais de <b>300 estruturas digitais</b>, gerenciou <b>múltiplos 7 dígitos em anúncios online</b> e alcançou <b>milhões de visualizações</b> através dos seus conteúdos na&nbsp;internet.</p>
         </div>
-        <div class="role">Estrategista Digital e Sócio-Fundador da Arrive In&nbsp;Digital</div>
-        <p><b>Mais de 14 anos de atuação no mercado digital.</b> Ao longo dessa trajetória, construiu mais de <b>300 estruturas digitais</b>, gerenciou <b>múltiplos 7 dígitos em anúncios online</b> e alcançou <b>milhões de visualizações</b> através dos seus conteúdos na&nbsp;internet.</p>
       </div>
     </div>
   </div>
